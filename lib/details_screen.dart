@@ -3,8 +3,10 @@ import 'package:simple_navigation_example/cool_button.dart';
 import 'package:simple_navigation_example/cool_random_number_container.dart';
 
 class DetailsScreen extends StatelessWidget {
+  // This Screen needs a random number when used.
   const DetailsScreen({super.key, required this.randomNumber});
 
+  // Holds the random number to be used.
   final int randomNumber;
 
   @override

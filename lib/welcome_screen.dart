@@ -57,7 +57,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             const SizedBox(height: 12),
             CoolButton(
               onPressed: () {
-                // Open an new screen
+                // Open an new screen, provide argument
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => DetailsScreen(
