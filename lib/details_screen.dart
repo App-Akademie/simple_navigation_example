@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:simple_navigation_example/cool_button.dart';
+import 'package:simple_navigation_example/cool_random_number_container.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+  const DetailsScreen({super.key, required this.randomNumber});
+
+  final int randomNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -12,19 +15,21 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 128),
+            const SizedBox(height: 64),
             const Icon(Icons.info, size: 100, color: Colors.green),
-            const SizedBox(height: 20),
+            const SizedBox(height: 24),
             const Text(
               'Details Screen',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
             Text(
-              'Here you can find more information.',
+              'This was the random number given to us:',
               style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 64),
+            CoolRandomNumberContainer(randomNumber: randomNumber),
+            const SizedBox(height: 64),
             CoolButton(
               onPressed: () {
                 // Close the current screen
